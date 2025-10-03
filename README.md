@@ -5,11 +5,8 @@ Car Rental Service Application
 The Car Rental Service Application is a small-scale management system built to streamline booking and rental operations for a car rental business. It integrates Microsoft Access, Excel, and VBA to automate and simplify key processes such as:
 
 Booking and tracking car rentals
-
 Monitoring vehicle availability
-
 Calculating revenue
-
 Managing customer details
 
 This system minimizes manual work, reduces errors, and provides real-time insights into business performance.
