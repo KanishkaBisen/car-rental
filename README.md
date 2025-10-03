@@ -16,27 +16,13 @@ This system minimizes manual work, reduces errors, and provides real-time insigh
 
 🗂 Database Structure
 
-The application is powered by an Access database with three core tables:
+| **Table**     | **Primary Key** | **Fields**                                                 |
+| ------------- | --------------- | ---------------------------------------------------------- |
+| **Customers** | `CustomerID`    | CustomerName, Phone, Email, LicenseNumber, Address         |
+| **Cars**      | `CarID`         | CarBrand, CarModel, CarType, Year, DailyRate, NumberPlate  |
+| **Bookings**  | `BookingID`     | CustomerID (FK), CarID (FK), StartDate, EndDate, TotalCost |
 
-Customers Table
-
-CustomerID (Primary Key)
-
-CustomerName, Phone, Email, LicenseNumber, Address
-
-Cars Table
-
-CarID (Primary Key)
-
-CarBrand, CarModel, CarType, Year, DailyRate, NumberPlate
-
-Bookings Table
-
-BookingID (Primary Key)
-
-CustomerID, CarID, StartDate, EndDate, TotalCost
-
-The Bookings Table links customers and cars using foreign keys.
+🔗 The Bookings Table links customers and cars via foreign keys (CustomerID, CarID).
 
 🔍 Queries
 
@@ -52,44 +38,31 @@ Total Revenue by Car – Summarizes earnings per car model.
 
 📊 Excel Front-End
 
-The Excel interface makes the system easy to use with three sheets:
-
 Records Sheet
 
-Displays all booking data with conditional formatting:
+Displays all bookings with statuses (Booked 🔴, Active 🟢, Completed 🔵).
 
-🔴 Red: Booked
-
-🟢 Green: Active
-
-🔵 Blue: Completed
+Load Data button refreshes data from the database.
 
 <img width="363" height="194" alt="image" src="https://github.com/user-attachments/assets/fb0d11f1-7b68-40cb-9bf6-1c2d208ec008" />
 
-
-Load Data button refreshes from the database.
-
 Form Sheet
 
-Main interface for adding new bookings.
+Interface to add/edit bookings.
 
-Fields for customer and booking details.
+Auto-fetches customer/car details with VLOOKUP.
 
-Features:
+Calculates total cost and duration automatically.
 
-Auto-fetch customer info using VLOOKUP
-
-Drop-down car brand/model selection
-
-Automatic day count and cost calculation
-
-Save Data button sends form data to the database.
+Save Data button submits booking data to the database.
 
 Pivot Table Sheet
 
-Summarizes monthly revenue per car.
+<img width="274" height="285" alt="image" src="https://github.com/user-attachments/assets/da9beccc-791b-46f8-ab6a-1374e432e117" />
 
-Provides business insights for decision-making.
+Summarizes total revenue by car and time period.
+
+Supports business insights and decision-making.
 
 ⚙️ VBA Middleware
 
