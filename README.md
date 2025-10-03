@@ -64,6 +64,9 @@ Displays all booking data with conditional formatting:
 
 🔵 Blue: Completed
 
+<img width="363" height="194" alt="image" src="https://github.com/user-attachments/assets/fb0d11f1-7b68-40cb-9bf6-1c2d208ec008" />
+
+
 Load Data button refreshes from the database.
 
 Form Sheet
